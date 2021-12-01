@@ -62,3 +62,25 @@
     width: 50%;
   }
 }
+
+@media only screen and ( max-width : 540px ) {
+
+  .feedback-container {
+    text-align: center;
+    width: 80%;
+  }
+
+  .ranking-icon {
+    font-size: 20px;
+    margin-left: 2px;
+  }
+
+  .feedback-container button {
+    background-color: transparent;
+    border: 1px solid rgb(13, 117, 180);
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    color: #eee;
+    font-size: 16px;
+  }
+}

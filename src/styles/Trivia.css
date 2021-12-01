@@ -191,3 +191,37 @@
     width: 470px;
   }
 }
+
+@media only screen and ( max-width : 540px ) {
+
+  .question {
+    font-size: 22px;
+    height: 340px;
+    padding: 10px;
+    width: 300px;
+  }
+
+  .answers-container {
+    margin-top: 20px;
+    width: 98%;
+  }
+
+  .btn-next {
+    margin-top: -5px;
+    width: 20%;
+  }
+
+  .btn-next {
+    font-size: 18px;
+    height: 50px;
+    margin-bottom: 25px;
+    width: 50%;
+  }
+
+  .answers-container button {
+    font-size: 18px;
+    height: 50px;
+    margin-bottom: 25px;
+    width: 80%;
+  }
+}

@@ -54,3 +54,30 @@
   text-align: center;
   width: 180px;
 }
+
+@media only screen and ( max-width : 540px ) {
+
+  .ranking-player {
+    height: 80px;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 380px;
+  }
+
+  .ranking-wrapper a {
+    width: 80%;
+  }
+
+  .ranking-wrapper button {
+    background-color: transparent;
+    border: 1px solid rgb(13, 117, 180);
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    color: #eee;
+    font-size: 17px;
+    height: 50px;
+    margin: 30px 0 50px;
+    width: 100%;
+  }
+}
