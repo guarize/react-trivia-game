@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import logo from '../images/trybetrivia_logo.png';
 import { fetchApi, fetchQuestions } from '../actions/index';
 import '../styles/Login.css';
 
@@ -53,7 +52,6 @@ class Login extends React.Component {
     return (
       <div className="login-wrapper">
         <h1>Trybe Trivia</h1>
-        {/* <img src={ logo } className="login-logo" alt="logo" /> */}
         <form className="login-form">
           <label htmlFor="name-input">
             Name
