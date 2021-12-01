@@ -1,0 +1,23 @@
+.trivia-header {
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  font-size: 30px;
+  height: 80px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  width: 100vw;
+}
+
+.header-profile {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-profile img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}

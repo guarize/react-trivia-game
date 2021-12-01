@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap') ;
+
+* {
+  box-sizing: border-box;
+  font-family: Nova Square , cursive;
+}
+
+h1, h2, h3, p {
+  margin: 1rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  border-radius: 5px;
+  display: block;
+  padding: 0.6rem;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #2fc18c;
+  box-shadow: 0 0 0 3px #adf;
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.4rem 1.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover, button:focus {
+  transform: scale(102%);
+}

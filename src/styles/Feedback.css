@@ -1,0 +1,64 @@
+.feedback-wrapper {
+  background: radial-gradient(circle, rgba(5, 56, 44, 1) 0%, rgba(39, 45, 47, 1) 100%);
+  background-color: rgb(5, 56, 44);
+  color: white;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.feedback-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  margin: 100px auto;
+  width: 35%;
+}
+
+.feedback-container a {
+  text-decoration: none;
+  width: 50%;
+}
+
+.feedback-container button {
+  background-color: transparent;
+  border: 1px solid rgb(13, 117, 180);
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  color: #eee;
+  font-size: 18px;
+  height: 55px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.feedback-container p {
+  font-size: 30px;
+}
+
+.feedback-container h3 {
+  font-size: 35px;
+  margin-bottom: 60px;
+}
+
+.ranking-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.ranking-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+@media only screen and ( max-width : 1400px ) {
+
+  .feedback-container {
+    width: 50%;
+  }
+}
