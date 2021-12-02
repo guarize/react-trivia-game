@@ -6,28 +6,29 @@ export const PAUSE_TIMER = 'PAUSE_TIMER';
 export const SAVE_SCORE = 'SAVE_SCORE';
 export const SAVE_RANKING = 'SAVE_RANKING';
 export const SAVE_PICTURE = 'SAVE_PICTURE';
+export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
 const saveToken = (token) => ({
   type: TOKEN,
   token,
 });
 
-export const fetchApi = () => (
-  (dispatch) => fetch(URL_TRIVIA_TOKEN)
-    .then(
-      (response) => response.json()
-        .then(({ token }) => dispatch(saveToken(token))),
-    )
-);
+export const fetchApi = () => (dispatch) =>
+  fetch(URL_TRIVIA_TOKEN).then((response) =>
+    response.json().then(({ token }) => dispatch(saveToken(token))),
+  );
 
-const saveQuestions = (questions) => ({ type: 'SAVE_QUESTIONS', questions });
+const saveQuestions = (questions) => ({ type: SAVE_QUESTIONS, questions });
 
-export const fetchQuestions = (token) => (
-  (dispatch) => fetch(`https://opentdb.com/api.php?amount=5&token=${token}`)
-    .then(
-      (response) => response.json()
-        .then((json) => dispatch(saveQuestions(json))),
-    )
-);
+export const saveGameSetting = (url, questionsLength) => ({
+  type: SAVE_SETTINGS,
+  url,
+  questionsLength,
+});
+
+export const fetchQuestions = (token, url) => (dispatch) =>
+  fetch(`${url}${token}`).then((response) =>
+    response.json().then((json) => dispatch(saveQuestions(json))),
+  );
 
 export const saveScore = (score) => ({ type: SAVE_SCORE, score });

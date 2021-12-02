@@ -1,0 +1,88 @@
+.settings-wrapper {
+  background: radial-gradient(
+    circle,
+    rgba(5, 56, 44, 1) 0%,
+    rgba(39, 45, 47, 1) 100%
+  );
+  background-color: rgb(5, 56, 44);
+  color: #bfffec;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.settings-wrapper h1 {
+  margin: 150px 0 50px;
+}
+
+.settings-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  justify-content: center;
+  width: 35%;
+  margin-bottom: 60px;
+}
+
+.settings-save {
+  background-color: #2fc18c;
+  color: #0b3128;
+  font-size: 18px;
+  height: 45px;
+  margin-bottom: 15px;
+  width: 180px;
+}
+
+.settings-wrapper input, select {
+  background-color: #222;
+  border: 1px solid #2fc18c;
+  color: white;
+  font-size: 18px;
+  height: 48px;
+  margin-bottom: 40px;
+  width: 440px;
+}
+
+.settings-wrapper label {
+  font-size: 22px;
+}
+
+@media only screen and ( max-width : 1400px ) {
+
+  .settings-container {
+    width: 55%;
+  }
+}
+
+@media only screen and ( max-width : 996px ) {
+
+  .settings-container {
+    width: 75%;
+  }
+}
+
+@media only screen and ( max-width : 640px ) {
+
+  .settings-wrapper h1 {
+    margin: 70px 0 30px;
+  }
+
+  .settings-container {
+    width: 90%;
+  }
+
+  .settings-wrapper label {
+    width: 90%;
+  }
+
+  .settings-wrapper input, select {
+    width: 100%;
+  }
+}

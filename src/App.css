@@ -14,7 +14,7 @@ label {
   margin-bottom: 0.25rem;
 }
 
-input {
+input, select {
   border-radius: 5px;
   display: block;
   padding: 0.6rem;

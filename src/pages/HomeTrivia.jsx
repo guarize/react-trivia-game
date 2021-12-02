@@ -27,12 +27,12 @@ class HomeTrivia extends React.Component {
   }
 
   componentDidMount() {
-    const { token, questionsApi } = this.props;
+    const { token, questionsApi, url } = this.props;
     if (!localStorage.getItem('ranking')) {
       localStorage.setItem('ranking', JSON.stringify([]));
     }
 
-    questionsApi(token);
+    questionsApi(token, url);
 
     this.timerCountdown();
   }
@@ -85,7 +85,7 @@ class HomeTrivia extends React.Component {
   }
 
   addCounter() {
-    const { history } = this.props;
+    const { history, questions_length } = this.props;
     const { counter } = this.state;
 
     this.setState((prevState) => ({
@@ -94,8 +94,8 @@ class HomeTrivia extends React.Component {
       timerValue: 30,
     }));
     this.timerCountdown();
-    const LENGTH_QUESTIONS = 4;
-    if (counter === LENGTH_QUESTIONS) history.push('/feedback');
+
+    if (counter === Number(questions_length)) history.push('/feedback');
   }
 
   timerCountdown() {
@@ -115,7 +115,7 @@ class HomeTrivia extends React.Component {
   }
 
   render() {
-    const { questionsShuffled } = this.props;
+    const { questionsShuffled, questions_length } = this.props;
     const {
       counter,
       buttonStyle,
@@ -124,13 +124,12 @@ class HomeTrivia extends React.Component {
       buttonsDisabled,
       score,
     } = this.state;
-    const QUESTIONS_LENGTH = 4;
     return (
       <div className="trivia-wrapper">
         <HeaderTrivia score={ score } />
         <div className="trivia-container">
           <h1>
-            {counter === QUESTIONS_LENGTH
+            {counter === Number(questions_length)
               ? 'Final Question'
               : `Question ${counter + 1}`}
           </h1>
@@ -177,10 +176,12 @@ const mapStateToProps = (state) => ({
   }),
   player: state.reducer.player,
   token: state.reducer.token,
+  url: state.reducer.api_url,
+  questions_length: state.reducer.questions_length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  questionsApi: (token) => dispatch(fetchQuestions(token)),
+  questionsApi: (token, url) => dispatch(fetchQuestions(token, url)),
 });
 
 HomeTrivia.propTypes = {

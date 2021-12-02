@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { fetchApi, fetchQuestions } from '../actions/index';
+import { fetchApi } from '../actions/index';
 import '../styles/Login.css';
 
 class Login extends React.Component {
@@ -31,13 +31,11 @@ class Login extends React.Component {
   }
 
   async startGame() {
-    const { fetchToken, history, questionsApi } = this.props;
+    const { fetchToken, history } = this.props;
     const { name, email } = this.state;
 
     await fetchToken();
     const { token } = this.props;
-
-    await questionsApi(token);
 
     localStorage.setItem('token', token);
     localStorage.setItem(
@@ -103,13 +101,11 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchToken: () => dispatch(fetchApi()),
-  questionsApi: (token) => dispatch(fetchQuestions(token)),
 });
 
 Login.propTypes = {
   token: PropTypes.string,
   fetchToken: PropTypes.func,
-  questionsApi: PropTypes.func,
 }.isRequired;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
