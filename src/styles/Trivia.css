@@ -57,7 +57,7 @@
 
 .answers-container button, .btn-next {
   background-color: transparent;
-  border: 1px solid rgb(13, 117, 180);
+  border: 1px solid rgb(13, 250, 240);
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   color: #eee;
@@ -117,13 +117,11 @@
 .red-border {
   background-color: #3f0d12;
   background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
-  border: none;
 }
 
 .green-border {
   background-color: #63d471;
   background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
-  border: none;
 }
 
 .question p {
