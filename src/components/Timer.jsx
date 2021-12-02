@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IoStopwatchSharp } from 'react-icons/io5';
-// import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import '../styles/Timer.css';
 
 class Timer extends React.Component {

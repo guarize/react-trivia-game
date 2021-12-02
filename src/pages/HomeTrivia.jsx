@@ -7,8 +7,6 @@ import Timer from '../components/Timer';
 import { fetchQuestions } from '../actions/index';
 import '../styles/Trivia.css';
 
-// let timer;
-
 class HomeTrivia extends React.Component {
   constructor(props) {
     super(props);
@@ -156,7 +154,7 @@ class HomeTrivia extends React.Component {
               className="btn-next"
               onClick={ this.addCounter }
             >
-              Próxima
+              Next Question
             </button>
           )}
         </div>

@@ -15,11 +15,11 @@ class Login extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.validadeButton = this.validadeButton.bind(this);
+    this.validateButton = this.validateButton.bind(this);
     this.startGame = this.startGame.bind(this);
   }
 
-  validadeButton() {
+  validateButton() {
     const { name, email } = this.state;
     return !(name.length > 0 && email.length > 0);
   }
@@ -80,7 +80,7 @@ class Login extends React.Component {
               type="button"
               data-testid="btn-play"
               className="btn-play"
-              disabled={ this.validadeButton() }
+              disabled={ this.validateButton() }
               onClick={ this.startGame }
             >
               Play
