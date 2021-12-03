@@ -20,7 +20,7 @@ class AnswersButton extends React.Component {
         data-testid={
           answer === correctAnswer ? 'correct-answer' : `wrong-answer-${index}`
         }
-        disabled={ buttonsDisabled }
+        disabled={ buttonsDisabled || buttonStyle }
         className={ buttonStyle && handleClassName(answer, correctAnswer) }
         dangerouslySetInnerHTML={ { __html: answer } }
         onClick={ () => handleAnswersButton(difficulty, (answer === correctAnswer)) }
