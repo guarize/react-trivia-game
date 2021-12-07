@@ -13,8 +13,6 @@ This is a solution to [Trybe's](https://www.betrybe.com/) Trivia Game Project. T
     - [Built with](#built-with)
   - [Authors](#authors)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 This was a group project in which we developed a trivia-based quiz game using React and Redux, developing its functionality in groups according to the demands defined in a Kanban board.
